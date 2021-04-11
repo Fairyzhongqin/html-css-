@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .one {
+      width: 300px;
+      height: 300px;
+      background: red;
+      /* 加了float后不再是块级元素，而是inline-block 浮动的元素会贴在一起，但是当宽度不够会另起一行*/
+      /* 浮动的元素最好有个标准流的父亲 */
+      float: left;
+    }
+    .two{
+      width: 400px;
+      height: 400px;
+      background:green;
+      float: right;
+    }
+    .fa{
+      width: 200px;
+      height: 200px;
+      background: red;
+      padding:10px;
+      border:10px solid purple;
+      /* float: left; */
+    }
+    .son{
+      width: 50px;
+      height: 50px;
+      background:green;
+      float: right;
+    }
+    .famao{
+      width: 500px;
+      height: 500px;
+      background: red;
+    }
+    .damao{
+      width: 50px;
+      height: 50px;
+      background: purple;
+      float: left;
+    }
+    .ermao{
+      float: left;
+      width: 100px;
+      height: 100px;
+      background: green;
+    }
+  </style>
+</head>
+<body>
+  <!-- float是浮动 -->
+  <!-- <div class="one"></div>
+  <div class="two"></div> -->
+  <!-- 浮动元素与父盒子的关系：子盒子的浮动是相对于父盒子对齐 不会与父盒子边框重叠，也不会超过父盒子的内边距 -->
+  <div class="fa">
+    <div class="son">123</div>
+  </div>
+  <div class="famao">
+    <div class="damao">123</div>
+    <div class="ermao">1323</div>
+  </div>
+  <!-- 要清除浮动，因为父盒子有时候不方便给出高度，而浮动的子盒子也没有高度，所以会影响下面的标准流盒子，所以要清除浮动 -->
+  <!-- 清除浮动的方法：1.额外标签法在最后浮动的元素后加一个新元素，添加样式clear both
+                      2.父级添加overflow hidden 
+                      3.父级添加after伪元素的方法
+                      4.父级使用双伪元素清除-->
+</body>
+</html>

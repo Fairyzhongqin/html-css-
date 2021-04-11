@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小说排行榜</title>
+  <style>
+    table ,th,td{
+      border:1px solid pink;
+      /* 让相邻单元格合并边框 */
+      border-collapse: collapse;
+    }
+    .dppink{
+      background: red;
+    }
+  </style>
+</head> 
+<body>
+  <table  cellspacing="0" width="500" height="249" align="center">
+    <caption><h3>小说排行榜</h3></caption>
+    <thead> 
+      <tr class="dppink">
+        <th>排行</th>
+        <th>小说</th>
+        <th>趋势</th>
+        <th>今日搜索</th>
+        <th>最近七日</th>
+        <th>相关链接</th>
+      </tr>
+    </thead>
+   <tbody>
+    <tr>
+      <td>1</td>
+      <td>鬼吹灯</td>
+      <td></td>
+      <td>134</td>
+      <td>3213</td>
+      <td>
+        <a href="#">贴吧</a>
+        <a href="#">百度</a>
+        <a href="#">图片</a>
+      </td>  
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>相见欢</td>
+      <td></td>
+      <td>257</td>
+      <td>3213</td>
+      <td>
+        <a href="#">贴吧</a>
+        <a href="#">百度</a>
+        <a href="#">图片</a>
+      </td>  
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>狐狸先生</td>
+      <td></td>
+      <td>233</td>
+      <td>4546</td>
+      <td>
+        <a href="#">贴吧</a>
+        <a href="#">百度</a>
+        <a href="#">图片</a>
+      </td>  
+    </tr>
+    <tfoot>
+      <tr>
+        <td colspan="6" align="center">未完待续</td>
+      </tr>
+    </tfoot>
+   </tbody>
+   
+  </table>
+</body>
+</html>

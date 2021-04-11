@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 视口标签 作用是让在手机上看到的跟电脑上一样 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minmum-scale=1.0,maxmum-scale=1.0,user-scalable=no">
+  <title>Document</title>
+  <style>
+    .bg{
+      width: 500px;
+      height: 500px;
+      border:2px solid red;
+      background:url(../images/1.jpg) no-repeat;
+      /* background-size: 图片宽度 图片高度; */
+      /* background-size: 500px 200px; */
+      /* 1.只写一个参数 肯定是宽度 高度省略了 会等比例缩放 */
+      /* background-size: 500px; */
+      /* 2.里面的单位可以跟100%，相对于父盒子来说的 */
+        background-size: 50%;
+        /* 3.cover等比例拉伸，要完全覆盖div盒子，可能有部分背景图片显示不全 */
+          background-size: cover;
+          /* 4.contain 高度和宽度等比例拉伸，当宽或高铺满盒子时，有部分空白区 */
+          background-size: contain;
+          /* css3盒子模形中加了box-sizing:border-box padding 和border不会再撑大盒子了 */
+   }
+  </style>
+</head>
+<body>
+  <div>自律自强自谦</div>
+  <div>二倍图：对于一张50*50的图片在手机中打开，会按物理像素比放大倍数，会造成图片模胡，所以采取的做法是要100*100的图，手动缩小一倍</div>
+  <div class="bg"></div>
+  插入图片跟背景图片都需要二倍图，所以背景图片先二倍图，再用bgs缩放 ，再pc端和手机端就是正常
+  在移动端开发有两种方法：单独制作 响应式
+  单独制作移动端页面技术有： 流式布局 flex弹性布局 less+rem+媒体查询 混合布局
+  响应式布局 媒体查询 bootstrap
+</body>
+</html>

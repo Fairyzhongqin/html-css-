@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- table是 表格 tr是行标签 td是单元格 tr标签里只能是td标签，但是td标签是个容器，可以容纳很多标签
+  cellspacing是控制单元格和单元格之间的距离,cellpadding是控制单元格和内容之间的距离
+th是表头单元格，会让里面的文字加粗并且居中显示
+rowspan跨行合并 colspan跨列合并-->
+  <table border="1" width="200" height="300" align="center" cellspacing="0" > 
+    <caption style="color:red">个人信息表</caption>
+    <tr>
+      <th>姓名</th>
+      <th>年龄</th>
+      <th>性别</th>
+    </tr>
+    <tr align="left">
+      <td>真诚</td>
+      <td>20</td>
+      <td rowspan="2">女</td>
+    </tr>
+    <tr align="left">
+      <td colspan="2">碳刷</td>
+      <!-- <td>21</td> -->
+      <!-- <td>男</td> -->
+    </tr>
+  </table>
+</body>
+</html>

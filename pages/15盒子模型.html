@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    /* p{
+      width:200px;
+      height: 200px;
+      border:1px solid red;
+      给padding后盒子会变大
+      padding-top:10px;
+    } */
+    div{
+      width: 300px;
+      height: 300px;
+      border:1px solid red;
+      /* 让块级盒子水平居中对齐，必须有宽度，然后margin:0 auto */
+      margin:0 auto;
+      /* 让盒子里的文字和行内及行内块元素都可水平居中 */
+      text-align: center;
+    }
+    div p{
+      /* width: 200px; */
+      /* 如果盒子没有给宽高则不会被padding撑开 */
+      height: 50px;
+      background: pink;
+      padding-left:20px;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    盒子模型里有元素内容，边框 （border），内边距(padding) 外边距(margin)
+    盒子实际大小=内容的大小+内边距+边框
+  </p>
+  <div>
+    <p>213</p>
+  </div>
+</body>
+</html>

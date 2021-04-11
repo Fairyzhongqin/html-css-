@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .one{
+      color:red;
+    }
+    #two{
+      font-size: 20px;
+      text-indent: 2em;
+      line-height: 24px;
+      text-decoration: line-through;
+    }
+    *{
+      color:yellow;
+      font-size: 20px;
+    }
+    .demo1 p{
+      color:green;
+    }
+    /* 只选最近的一个 */
+    .demo2>p{
+      color:tomato;
+    }
+    .demo3.jiaoji
+    { color:black;}
+   .demo3,.bingji
+   {color:blue;}
+   .weilei:link{
+     color:#ccc;
+     text-decoration: none;
+   }
+   .weilei:hover{
+     color:red;
+   }
+   .weilei:visited
+   {
+     color:purple;
+     text-decoration: underline;
+   }
+   .weilei:active{
+     color:green;
+   }
+  </style>
+</head>
+<body>
+  <div class="one" id="two">标签选择器 类选择器 id选择器 通配符选择器 后代选择器 子元素选择器 交集选择器 并集选择器 伪类选择器</div>
+  <div class="demo1">
+    <p>后代选择器</p>
+  </div>
+  <div class="demo2">
+    <p>
+      子代选择器
+      <strong>子弟啊</strong>
+    </p>
+  </div>
+  <div class="demo3 jiaoji">交集选择器</div>
+  <div class="binji">并集</div>
+  <a href="#" class="weilei">伪类选择器</a>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- type属性有text单行文本输入框 password 密码输入框 radio 单选输入框 checkbox 复选框 button 普通按钮
+               submit 提交按钮 reset重值按钮 image 图像形式的提交按钮 file文件域 -->
+  <!-- name 控件的名称，是为区别不同的表单 value Input控件中的默认文本值 size input控件在页面中的显示宽带
+    checked 定义选择默认选项中的项  maxlength 控件中允许输入的最多字符数-->
+ <body>
+ 用户名： <input type="text" value="请输入用户名" name="username"/><br>
+  密码：<input type="password" name="password"/><br/>
+  <!-- 通过赋值相同的name，实现单选 -->
+  性别: <input type="radio" name="sex" checked="checked">  男 <input type="radio" name="sex"/>女 <br/>
+  爱好: 
+  睡觉<input type="checkbox" name="hobby" checked="checked"/>
+  爬山<input type="checkbox" name="hobby"/>
+  吃饭<input type="checkbox" name="hobby"/>
+  追据<input type="checkbox" name="hobby"/>
+  <br/>
+  <input type="button" value="获取短信验证码"/>
+  <input type="submit" >
+  <input type="reset">
+   <input type="image" src="../images/1.jpg"  width="50px" height="50px">
+   <br/>
+   <!-- 上传文件 -->
+   <input type="file">
+   <!-- 绑定表单元素 1.通过for和id实现 2.通过label直接包含实现 -->
+   <label for="like">喜爱</label>
+   <input type="text" name="likeg" id="like"/>
+   <label ><input type="text" value="做个真诚的人"></label>
+   <br/>
+   用户留言<input type="textarea">
+   <br/>
+   <textarea name="" id="" cols="30" rows="10"></textarea>
+   <br/>
+   籍贯
+   <!-- selected默认选中 -->
+   <select name="" id="">
+     <option value="" selected="selected">请选择省份</option>
+     <option value="">北京</option>
+     <option value="">天津</option>
+     <option value="">上海</option>
+     <option value="">广州</option>
+   </select>
+   <select name="" id="">
+     <option value="">请选择城市</option>
+     <option value="" selected="selected">海淀区</option>
+     <option value="">伤感区</option>
+     <option value="">还款区</option>
+     <option value="">工作区</option>
+   </select>
+</body>
+</html>

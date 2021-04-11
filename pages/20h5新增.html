@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    1.h5新增语义化标签
+    <header></header> <nav></nav> <article></article> <section></section> <aside></aside> <footer></footer>
+    在ie9中需要把这些元素转化为block
+    2.h5新增多媒体标签：音频 视频
+    <audio src="" controls="controls"></audio>
+    因为不同浏览器支持不同的格式
+    <audio >
+      <source src="" type="audio/mpeg">
+      <source src="" type="audio/ogg">
+    </audio>
+
+    <video src=""></video>
+    <video >
+      <source src="" type="video/mp4">
+      <source src="" type="video/ogg">
+    </video>
+    3.h5新增表单 
+    <form action="">
+      <input type="email">
+      <input type="url">
+      <input type="date">
+      <input type="number">
+      还有很多
+    </form>
+    h5新增表单属性
+    required 表单拥有该属性表示其内容不能为空，必填
+    placeholder 提示文本，存在默认值不显示
+    autofocus 自动聚焦
+    autocomplete 记录之间输入的值
+    multiple 可以选多文件提交
+    <form action="">
+      <input type="text" required="required" placeholder="提示文本，比value好用" autofocus="autofocus" autocomplete="on">
+     <input type="file" multiple="multiple">
+      <input type="submit">
+    </form>
+    4.css3新增属性选择器
+    <style>
+      button[disabled]
+      {
+        cursor: pointer;
+      }
+    </style>
+    <button disabled="disabled"></button>
+    5.新增结构伪类选择器
+    <style>
+      ul li:first-child{
+        color:black;
+      }
+      /* nth-child只选择里面第几个孩子 */
+      ul li:nth-child(3)
+      {color:red;}
+    </style>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <style>
+      /* :nth-child(n)里的n可以是偶数也可以是奇数 even odd 还可以是公式，当是公式是n从0开始 2*n 2*n+1 */
+      div span:first-of-type{
+        background-color: red;
+      }
+      div span:nth-of-type(2)
+      {background:green;}
+    </style>
+    <div>
+      <p>握手</p>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+    </div>
+  </div>
+  5.css3新增伪元素选择器before在标签前插入内容  after在标签后插入内容 before after创建的元素属于行内元素 他们必须包含content属性
+  <style>
+    div::before{
+     content: "我";
+    }
+  </style>
+  <div>
+    伪元素
+  </div>
+  6.css3新增位移转化transform 对行内标签没有效果 优点：自身位移变化不会影响其他盒子 
+  在把盒子水平居中可结合定位 
+  <style>
+    .wei{
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      transform: translate(100px,100px);
+    }
+    .pos{
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      width: 50px;
+      height: 50px;
+      background-color: green;
+    }
+  </style>
+  <div class="wei">
+    <div class="pos"></div>
+  </div>
+</body>
+</html>
