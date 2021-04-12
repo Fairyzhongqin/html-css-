@@ -19,5 +19,27 @@ git add .
 git commit -m"提交"
 git remote add origin 克隆的地址
 git push origin master
+
+<div>
+  1.git init 初始化
+  2.设置签名：用户名 邮箱 作用是区分不同开发人员的身份
+             辨析：这里设置的签名跟登陆远程库（代码托管中心）的账号密码没有关系
+    命令：项目级别/仓库级别：仅在当前本地库范围内有效 git config user.name **
+          系统用户级别：登陆当前操作系统的用户范围  git config --global user.name **
+
+  3.git add 文件 是把文件放入暂存区 git rm --cached 文件 是把文件从暂存区回退
+  4.git commit 文件 是从暂存区提交到本地库
+    git commit -m"输入信息" 文件
+  5.总结基本操作
+    1.状态查看操作
+      git status
+      查看工作区.暂存区状态
+    2.添加操作
+    git add [file name]
+    将工作区的“新建/修改”添加到暂存区
+    3.提交操作
+    git commit -m"commmit message"[file name]
+    将暂存区的内容提交到本地库
+</div>
 </body>
 </html>
